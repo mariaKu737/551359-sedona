@@ -15,14 +15,49 @@
           <li> <a href="information.html"> Информация </a></li>
           <li> <a href="gallery.html"> Фото и видео </a></li>
           <li> <a href="map.html"> Карта штата </a></li>
-          <li> <a href="hotels.html"> Гостиницы </a></li>
+          <li class="site-navigation-current"> <a href="hotels.html"> Гостиницы </a></li>
         </ul>
       </nav>
-      <img src="img/background-inner.jpg" width="768" height="512" alt="Фон формы">
+
     </header>
 <main class="container">
-
-  <!--Здесь будет форма !-->
+  <!--Форма !-->
+  <section class="search-hotel">
+    <img src="img/background-inner.jpg" width="768" height="512" alt="Фон формы">
+    <form class="form-search-hotel" action="№" method="post">
+          <p class="form-list">
+            <p class="title-list-form"> Инфраструктура </p>
+          <label for="form-list"> Бассейн </label>
+          <input type="checkbox" name="infrastructure" checked> <br>
+          <label for="form-list"> Парковка </label>
+          <input type="checkbox" name="infrastructure"><br>
+          <label for="form-list"> Wi-fi </label>
+          <input type="checkbox" name="infrastructure">
+          </p>
+        <p class="form-list">
+          <p class="title-list-form"> Тип жилья </p>
+        <label for="form-list"> Гостиница </label>
+        <input type="checkbox" name="type" checked> <br>
+        <label for="form-list"> Мотель </label>
+        <input type="checkbox" name="type" checked><br>
+        <label for="form-list"> Апартаменты </label>
+        <input type="checkbox" name="type" checked>
+          </p>
+        <p class="form-list">
+          <p class="title-list-form"> Стоимость в сутки (р) </p>
+          <div class="cost-full">
+            <div class="cost">
+              <input type="text" value="От 0">
+            </div>
+            <div class="cost">
+              <input type="text" value="До 3000">
+            </div>
+            <input type="range" min="0" max="3000" value="2000">
+          </div>
+        </p>
+        <button class="button-show-result" type="submit"> Показать </button>
+    </form>
+  </section>
 <div class="sorting">
   <ul class="sorting-item">
     <li><p class="found">Найдено: 3 </p></li>
