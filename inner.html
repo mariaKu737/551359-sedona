@@ -15,36 +15,45 @@
           <li> <a href="information.html"> Информация </a></li>
           <li> <a href="gallery.html"> Фото и видео </a></li>
           <li> <a href="map.html"> Карта штата </a></li>
-          <li class="site-navigation-current"> <a href="hotels.html"> Гостиницы </a></li>
+          <li class="site-navigation-current"> <a href="inner.html"> Гостиницы </a></li>
         </ul>
       </nav>
 
     </header>
 <main class="container">
   <!--Форма !-->
-  <section class="search-hotel">
+  <section class="search-hotel-inner">
+    <h2 class="visually-hidden">Поиск гостиницы </h2>
     <img src="img/background-inner.jpg" width="768" height="512" alt="Фон формы">
-    <form class="form-search-hotel" action="№" method="post">
-          <p class="form-list">
-            <p class="title-list-form"> Инфраструктура </p>
-          <label for="form-list"> Бассейн </label>
-          <input type="checkbox" name="infrastructure" checked> <br>
-          <label for="form-list"> Парковка </label>
-          <input type="checkbox" name="infrastructure"><br>
-          <label for="form-list"> Wi-fi </label>
-          <input type="checkbox" name="infrastructure">
-          </p>
-        <p class="form-list">
-          <p class="title-list-form"> Тип жилья </p>
-        <label for="form-list"> Гостиница </label>
-        <input type="checkbox" name="type" checked> <br>
-        <label for="form-list"> Мотель </label>
-        <input type="checkbox" name="type" checked><br>
-        <label for="form-list"> Апартаменты </label>
-        <input type="checkbox" name="type" checked>
-          </p>
-        <p class="form-list">
-          <p class="title-list-form"> Стоимость в сутки (р) </p>
+    <form class="form-search-hotel" action="https://echo.htmlacademy.ru" method="get">
+
+          <p class="form-list-title"> Инфраструктура</p>
+          <ul class="form-list">
+            <li>  <input id="pool" type="checkbox"  name="pool" checked>
+              <label for="pool"> Бассейн </label>
+            </li>
+            <li> <input id="parking" type="checkbox" name="parking">
+              <label for="parking"> Парковка </label>
+            </li>
+            <li> <input id="wi-fi" type="checkbox" name="wi-fi">
+              <label for="wi-fi"> Wi-fi </label>
+            </li>
+          </ul>
+
+          <p class="form-list-title"> Тип жилья</p>
+          <ul class="form-list">
+            <li>  <input id="type-hotel" type="checkbox" name="hotel" checked>
+              <label for="type-hotel"> Гостиница </label>
+            </li>
+            <li> <input id="type-motel" type="checkbox" name="motel" checked>
+              <label for="type-motel"> Мотель </label>
+            </li>
+            <li> <input id="type-apartments" type="checkbox" name="apartments" checked>
+              <label for="type-apartments"> Апартаменты </label>
+            </li>
+          </ul>
+
+          <p class="form-list-title"> Стоимость в сутки (р) </p>
           <div class="cost-full">
             <div class="cost">
               <input type="text" value="От 0">
@@ -52,26 +61,32 @@
             <div class="cost">
               <input type="text" value="До 3000">
             </div>
-            <input type="range" min="0" max="3000" value="2000">
+              <div class="range-line">
+                <div class="white-line">
+                  <input type="text" name="value-white-line">
+                  <button class="button-range-min">  </button>
+                  <button class="button-range-max">  </button>
+                </div>
+                <div class="gray-line">
+                  <input type="text" name="value-gray-line">
+                </div>
+              </div>
           </div>
-        </p>
-        <button class="button-show-result" type="submit"> Показать </button>
+          <button class="button-show-result" type="submit"> Показать </button>
     </form>
   </section>
-<div class="sorting">
-  <ul class="sorting-item">
-    <li><p class="found">Найдено: 3 </p></li>
-    <li> <p class="sorting">Сортировка: </p></li>
-    <li><a class="sorting-priсe" href="#"> По цене </a> </li>
-    <li><a class="sorting-type" href="#"> По типу</a> </li>
-    <li><a class="sorting-rating" href="#"> По рейтингу</a> </li>
-    <li><button class="up"></button>
+<div class="sort">
+  <ul class="sort-list">
+    <li><p class="sort-list-title">Найдено: 3 </p></li>
+    <li><p class="sort-type">Сортировка: </p></li>
+    <li><a class="sort-item" href="#"> По цене </a> </li>
+    <li><a class="sort-item" href="#"> По типу</a> </li>
+    <li><a class="sort-item" href="#"> По рейтингу</a> </li>
+    <li><button class="up">
       <img src="button_up.svg" alt="Кнопка вверх">
-    </li>
-    <li><button class="down"> </button>
-      <img src="button_down.svg" alt="Кнопка вниз">
-
-    </li>
+    </button> </li>
+    <li><button class="down"><img src="button_down.svg" alt="Кнопка вниз">
+     </button> </li>
   </ul>
 </div>
 <div class="results">
@@ -86,9 +101,9 @@
       <a class="detail" href="#"> Подробнее </a>
       <a class="booking" href="#"> Забронировать </a>
     </div>
-    <div class="star">
+    <div class="raiting">
       <img src="img/stars_amara_resort.svg" width="3" height="8" alt="Рейтинг Amara">
-      <p class="raiting"> Рейтинг: 8,5 </p>
+      <p class="raiting-value"> Рейтинг: 8,5 </p>
     </div>
   </div>
   <div class="results-hotels">
@@ -118,7 +133,7 @@
         <a class="booking" href="#"> Забронировать </a>
       </div>
       <div class="star">
-        <img src="img/stars_Villas.svg" width="3" height="8" alt="Рейтинг Villas">
+        <img src="img/stars_villas.svg" width="3" height="8" alt="Рейтинг Villas">
         <p class="raiting"> Рейтинг: 9,2 </p>
       </div>
   </div>
@@ -130,9 +145,9 @@
   <p class="visitsedona"> #Visitsedona </p>
   <div class="footer-social">
     <ul>
-      <li><a class="social-batton" href="#"> Twitter </a></li>
-      <li><a class="social-batton" href="#"> Facebook </a></li>
-      <li><a class="social-batton" href="#"> Youtube </a></li>
+      <li><a class="social-button" href="#"> <span class="visually-hidden"> Twitter </span> </a></li>
+      <li><a class="social-button" href="#"> <span class="visually-hidden"> Facebook </span> </a></li>
+      <li><a class="social-button" href="#"> <span class="visually-hidden"> Youtube </span> </a></li>
     </ul>
   </div>
   <p class="footer-copyright">

@@ -15,88 +15,91 @@
           <li> <a href="information.html"> Информация </a></li>
           <li> <a href="gallery.html"> Фото и видео </a></li>
           <li> <a href="map.html"> Карта штата </a></li>
-          <li> <a href="hotels.html"> Гостиницы </a></li>
+          <li> <a href="inner.html"> Гостиницы </a></li>
         </ul>
       </nav>
     </header>
 <main class="container">
-    <span class="sedona">Седона - небольшой городок в Аризоне, заслуживающий
+    <span class="description-title">Седона - небольшой городок в Аризоне, заслуживающий
     большего! </span>
-    <p class="sedona-description"> Рассмотрим 5 причин, почему Седона круче, чем Гранд Каньон! </p>
+    <p class="description-subtitle"> Рассмотрим 5 причин, почему Седона круче, чем Гранд Каньон! </p>
     <img src="img/sedona.jpg" width="1200" height="800" alt="Седона">
-<h1 class="visualle-hidden">Седона </h1>
+<h1 class="visually-hidden">Седона </h1>
 <section class="reason">
-  <h2 class="visualle-hidden">Причины выбрать Седону </h2>
+  <h2 class="visually-hidden">Причины выбрать Седону </h2>
   <ul class="reason-list">
     <li class="reason-item reason-full">
       <h3 class="reason-item-title"> Настоящий городок </h3>
       <span class="reason-item-subtitle">-№1- </span>
       <p class="reason-item-description">Седона - не атракцион для туристов,там течет своя жизнь </p>
-      <img src="img/Layer10.jpg" width="800" height="401" alt="Картинка Настоящий городок">
+      <img src="img/layer10.jpg" width="800" height="401" alt="Картинка Настоящий городок">
     </li>
     <li class="reason-item reason-full">
       <h3 class="reason-item-title"> Там есть мост дьявола </h3>
       <span class="reason-item-subtitle">-№2- </span>
       <p class="reason-item-description">Да, по нему можно пройти! Если конечно вы осмелитесь </p>
-      <img src="img/Layer14.jpg" width="800" height="400" alt="Картинка Мост дьявола">
+      <img src="img/layer14.jpg" width="800" height="400" alt="Картинка Мост дьявола">
     </li>
-    <li class="reason-item reason-full">
+    <li class="reason-item">
       <h3 class="reason-item-title"> Небольшая площадь </h3>
       <span class="reason-item-subtitle">-№3- </span>
       <p class="reason-item-description"> Все достопремичательности находятся очень близко </p>
     </li>
-    <li class="reason-item reason-full">
+    <li class="reason-item">
       <h3 class="reason-item-title"> Красивая дорога </h3>
       <span class="reason-item-subtitle">-№4- </span>
       <p class="reason-item-description"> Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
     </li>
-    <li class="reason-item reason-full">
+    <li class="reason-item">
       <h3 class="reason-item-title"> Мало туристов </h3>
       <span class="reason-item-subtitle">-№5- </span>
       <p class="reason-item-description"> Большинство едет в гранд Каньон и толпится там</p>
     </li>
-    <li class="recomendation-item">
-      <h3 class="reason-item-title">Жилье</h3>
-      <p class="reason-item-description"> Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-    </li>
-    <li class="recomendation-item">
-      <h3 class="reason-item-title"> Еда</h3>
-      <p class="reason-item-description"> Всегда заказывайте фирменный бургер, вы не разочаруетесь! </p>
-    </li>
-    <li class="recomendation-item">
-      <h3 class="reason-item-title"> Сувениры</h3>
-      <p class="reason-item-description"> Не только китайского, но и местного производства!</p>
-    </li>
-
-  </ul>
+    <li class="recomendation-item-second">
+      <ul class="recomendation-list">
+        <li class="recomendation-item">
+          <h3 class="reason-item-title">Жилье</h3>
+          <p class="reason-item-description"> Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </li>
+        <li class="recomendation-item">
+          <h3 class="reason-item-title"> Еда</h3>
+          <p class="reason-item-description"> Всегда заказывайте фирменный бургер, вы не разочаруетесь! </p>
+        </li>
+        <li class="recomendation-item">
+          <h3 class="reason-item-title"> Сувениры</h3>
+          <p class="reason-item-description"> Не только китайского, но и местного производства!</p>
+        </li>
+      </ul>
+      </li>
+      </ul>
 </section>
 
 <section class="search-hotel">
-<h3 class="interest">Заинтересовались?</h3>
-<p class="search-date">Укажите предполагаемые даты поездки,
+<h3 class="form-title">Заинтересовались?</h3>
+<p class="form-subtitle">Укажите предполагаемые даты поездки,
   и мы покажем вам лучшие предложения гостиниц в Седоне </p>
   <img src="img/map.png" width="1200" height="473" alt="Карта">
 <!-- Форма -->
 <button class="button-form-open" type="submit" > Поиск гостиницы в Седоне </button>
-<form class="form-search" action="inner.html" method="post">
+<form class="form-search" action="https://echo.htmlacademy.ru" method="get">
       <p class="label-form">
-      <label for="form-date"> Дата заезда </label>
-      <input type="text" name="date" value="24 апреля 2017">
+      <label for="arrival-date"> Дата заезда </label>
+      <input id="arrival-date" type="text" name="arrival-date" value="24 апреля 2017">
     </p>
     <p class="label-form">
-      <label for="form-date"> Дата выезда </label>
-      <input type="text" name="date" value="4 июля 2017" >
+      <label for="date-departure"> Дата выезда </label>
+      <input id="date-departure" type="text" name="date-departure" value="4 июля 2017" >
     </p>
     <p class="label-form">
-      <label for="form-people"> Взрослые </label>
-      <input type="button" value="-">
-      <input type="text" value="2">
-      <input type="button" value="+">
+      <label for="number-adult"> Взрослые </label>
+      <input type="button" name="number-adult-minus" value="-">
+      <input id="number-adult" type="text" value="2">
+      <input type="button" name="number-adult-plus" value="+">
   </p>
   <p class="label-form">
-    <label for="form-people"> Дети </label>
+    <label for="nubmer-children"> Дети </label>
     <input type="button" value="-">
-    <input type="text" value="0">
+    <input id="nubmer-children" type="text" value="0">
     <input type="button" value="+">
   </p>
     <button class="button-search" type="submit"> Найти </button>
@@ -107,11 +110,12 @@
 <footer class="main-footer">
   <p class="visitsedona"> #Visitsedona </p>
   <div class="footer-social">
-    <ul>
-      <li><a class="social-batton" href="#"> Twitter </a></li>
-      <li><a class="social-batton" href="#"> Facebook </a></li>
-      <li><a class="social-batton" href="#"> Youtube </a></li>
-    </ul>
+    <h3 class="visually-hidden"> Социальные сети </h3>
+      <ul>
+        <li><a class="social-button" href="#"> <span class="visually-hidden"> Twitter </span> </a></li>
+        <li><a class="social-button" href="#"> <span class="visually-hidden"> Facebook </span> </a></li>
+        <li><a class="social-button" href="#"> <span class="visually-hidden"> Youtube </span> </a></li>
+      </ul>
   </div>
   <p class="footer-copyright">
     Website by
