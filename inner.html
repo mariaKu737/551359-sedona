@@ -31,7 +31,7 @@
     <img src="img/background-inner.jpg" width="768" height="512" alt="Фон формы">
     <form class="form-search-hotel" action="https://echo.htmlacademy.ru" method="get">
 
-          <p class="form-list-title"> Инфраструктура</p>
+          <p class="form-list-title"> Инфраструктура:</p>
           <ul class="form-list">
             <li>  <input id="pool" type="checkbox"  name="pool" checked>
               <label for="pool"> Бассейн </label>
@@ -44,7 +44,7 @@
             </li>
           </ul>
 
-          <p class="form-list-title"> Тип жилья</p>
+          <p class="form-list-title"> Тип жилья:</p>
           <ul class="form-list">
             <li>  <input id="type-hotel" type="checkbox" name="hotel" checked>
               <label for="type-hotel"> Гостиница </label>
@@ -57,22 +57,21 @@
             </li>
           </ul>
 
-          <p class="form-list-title"> Стоимость в сутки (р) </p>
+          <p class="form-list-title"> Стоимость в сутки (р): </p>
           <div class="cost-full">
             <div class="cost">
-              <input type="text" value="От 0">
+              <input id="cost-min" class="cost-min" type="text">
+              <label  for="cost-min">От 0</label>
             </div>
             <div class="cost">
-              <input type="text" value="До 3000">
+              <input id="cost-max" class="cost-max" type="text">
+              <label  for="cost-max">От 3000</label>
             </div>
               <div class="range-line">
-                <div class="white-line">
-                  <input type="text" name="value-white-line">
-                  <button class="button-range-min"> <img src="img/filter-button.svg">  </button>
-                  <button class="button-range-max"> <img src="img/filter-button.svg"> </button>
-                </div>
+                <button type="button" class="button-range-min"> <img src="img/filter-button.svg" alt="" >  </button>
+                <button type="button" class="button-range-max"> <img src="img/filter-button.svg" alt=""> </button>
                 <div class="gray-line">
-                  <input type="text" name="value-gray-line">
+
                 </div>
               </div>
           </div>
@@ -86,9 +85,9 @@
     <li><a class="sort-item" href="#"> По цене </a> </li>
     <li><a class="sort-item" href="#"> По типу</a> </li>
     <li><a class="sort-item" href="#"> По рейтингу</a> </li>
-    <li><button class="up"> <img src="img/icon-up-dir.svg" alt="Кнопка вверх">
+    <li><button type="button" class="up"> <img src="img/icon-up-dir.svg" alt="Кнопка вверх">
     </button> </li>
-    <li><button class="down"><img src="img/icon-down-dir.svg" alt="Кнопка вниз">
+    <li><button type="button" class="down"><img src="img/icon-down-dir.svg" alt="Кнопка вниз">
      </button> </li>
   </ul>
 </div>
@@ -98,14 +97,16 @@
       <img src="img/hotel_amara.jpg" width="135" height="90" alt="Amara Resort">
     </div>
     <div class="block-hotel">
-      <h3 class="hotel-name"> Amara Resort & SPA</h3>
+      <h3>
+        <a class="hotel-name" href="#"> Amara Resort & SPA </a>
+      </h3>
       <p class="hotel-type">Гостиница </p>
       <p class="hotel-price">От 4000 р. </p>
-      <button class="detail" href="#"> Подробнее </a>
-      <button class="booking" href="#"> Забронировать </a>
+      <button type="button" class="detail" > Подробнее </button>
+      <button type="button" class="booking" > Забронировать </button>
     </div>
     <div class="raiting">
-      <img src="img/stars_amara_resort.svg" width="3" height="8" alt="Рейтинг Amara">
+      <img src="img/star.svg" alt="Рейтинг Amara">
       <p class="raiting-value"> Рейтинг: 8,5 </p>
     </div>
   </div>
@@ -114,30 +115,34 @@
       <img src="img/hotel_desert.jpg" width="135" height="90" alt="Desert Quail">
     </div>
     <div class="block-hotel">
-      <h3 class="hotel-name"> Desert Quail Inn</h3>
+      <h3>
+        <a class="hotel-name" href="#">Desert Quail Inn </a>
+      </h3>
       <p class="hotel-type">Мотель </p>
       <p class="hotel-price">От 3000 р. </p>
-      <button class="detail" href="#"> Подробнее </a>
-      <button class="booking" href="#"> Забронировать </a>
+      <button type="button" class="detail"> Подробнее </button>
+      <button type="button" class="booking"> Забронировать </button>
     </div>
     <div class="star">
-      <img src="img/stars_desert_quail.svg" width="3" height="8" alt="Рейтинг Desert Quail">
-      <p class="raiting"> Рейтинг: 8,9 </p>
+      <img src="img/star.svg" alt="Рейтинг Desert Quail">
+      <p class="raiting-value"> Рейтинг: 8,9 </p>
     </div>
     <div class="results-hotels">
       <div class="hotel-photo">
         <img src="img/hotel_villas.jpg" width="135" height="90" alt="Villas">
       </div>
       <div class="block-hotel">
-        <h3 class="hotel-name"> Villas at Poco Diablo</h3>
+        <h3>
+          <a class="hotel-name" href="#">Villas at Poco Diablo </a>
+        </h3>
         <p class="hotel-type">Аппартаменты </p>
         <p class="hotel-price">От 2000 р. </p>
-        <button class="detail" href="#"> Подробнее </a>
-        <button class="booking" href="#"> Забронировать </a>
+        <button type="button" class="detail" > Подробнее </button>
+        <button type="button" class="booking" > Забронировать </button>
       </div>
       <div class="star">
-        <img src="img/stars_villas.svg" width="3" height="8" alt="Рейтинг Villas">
-        <p class="raiting"> Рейтинг: 9,2 </p>
+        <img src="img/star.svg" alt="Рейтинг Villas">
+        <p class="raiting-value"> Рейтинг: 9,2 </p>
       </div>
   </div>
 </div>
