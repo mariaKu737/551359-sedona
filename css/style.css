@@ -57,8 +57,10 @@ input {
   color: #766357;
 }
 .header-img {
+
   text-align: center;
   position: relative;
+  margin: 0;
 }
 
 .description-title {
@@ -196,13 +198,11 @@ input {
   height: 395px;
   width: 568px;
   margin: 0 auto;
-
 }
 
 .label-form input[type="text"] {
   background-color: #f2f2f2;
   border: none;
-
 
 /*  width: 222px;
   height: 38px; */
@@ -215,10 +215,13 @@ input {
 .number-adult {
   width: 38px;
   height: 38px;
+  margin-left: none;
+
 }
 .number-adult-minus {
   width: 38px;
   height: 38px;
+  margin-right: none;
 
   background-color:  #f2f2f2;
   color: #a9a9a9;
@@ -278,14 +281,13 @@ input {
   position: relative;
   width: 100%;
 }
-
 .form-search-hotel  {
   position: absolute;
     top: 250px;
-    left: 0;
-    width: 100%;
+    /*left: 0;*/
+    /*width: 100%;*/
+    width: 1200px;
 }
-
 .form-list-title {
   font-size: 16px;
   line-height: 21px;
@@ -295,9 +297,7 @@ input {
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-
 }
-
 .form-search-hotel input[type="text"] {
   font-size: 14px;
   line-height: 21px;
@@ -309,20 +309,21 @@ input {
   width: 222px;
   height: 36px;
 }
-
 .white-line button {
   background: none;
   border: none;
 }
-
 .form-search-hotel label {
   font-weight: normal;
 }
 .button-range-min,
 .button-range-max {
-  background: url("img/filter-button.svg");
-  fill: #ffb600;
-  outline: none;
+  background: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom; /* Положение фона */
+  width: 20px;
+  height: 23px;
+
 }
 
 .button-show-result {
@@ -357,7 +358,6 @@ input {
 
   border-bottom: 1px dashed #81b3d2;
 }
-
 .sort-list a:active {
   color: #81b3d2;
   border-bottom: none;
@@ -375,6 +375,12 @@ input {
   background: none;
   border: none;
 }
+
+.sort{
+  margin-left:72px;
+  margin-right:72px;
+}
+
 .results-hotels p {
   font-weight: normal;
 }
@@ -393,7 +399,6 @@ input {
 .hotel-name:focus {
   color: rgba(0, 0, 0, 0.3);
 }
-
 .detail {
   color: #ffffff;
   font-size: 14px;
@@ -449,4 +454,229 @@ input {
 
 .results{
   background-color: white;
+  margin-left:72px;
+  margin-right: 72px;
+}
+/* ----- Сеточные стили ----- */
+
+/*body {
+
+  background-image: url('img/sedona-index-1200.jpg');
+  background-repeat: no-repeat;
+}
+*/
+.main-navigation {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+.main-header {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header-logo {
+  width: 138px;
+  height: 70px;
+
+  order: 2;
+  position: absolute;
+  left: 50%;
+  margin-left: -69px;
+  z-index: 1;
+}
+.site-navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+flex-direction: column;
+  list-style: none;
+  height: 56px;
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+
+}
+.main-navigation-wrapper {
+  width: 100%;
+  height: 56px;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+.reason-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.reason-item-full {
+  width: 1200px;
+  height: 256px;
+
+}
+
+.reason-item-full h3 {
+  width: 165px;
+  height: 55px;
+
+  padding-top: 49px;
+
+}
+.reason-item-full p {
+  width: 281px;
+  height: 50px;
+
+  padding-bottom: 60px;
+}
+.reason-item-full span {
+  display: block;
+  width: 50px;
+  height: 40px;
+
+  padding-top: 115px;
+  padding-left: 40px;
+}
+.reason-item {
+  width: 400px;
+  height: 256px;
+}
+.recomendation-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.recomendation-item {
+  width: 400px;
+  height: 330px;
+
+}
+.main-footer {
+  padding: 36px 0;
+
+  height: 120px;
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-social {
+  width: 400px;
+
+  padding-right: 6px;
+  margin-right: 88px;
+}
+
+.footer-copyright {
+  margin-right: 88px;
+  margin-left: auto;
+  width: 240px;
+}
+.footer-hashtag {
+  margin-right: 88px;
+
+  width: 240px;
+}
+/* ----- Сеточные стили внутренняя страница ----- */
+.form-search-hotel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1200px;
+
+}
+.form-search-hotel .container-infrastructure, .container-housingtype, .container-costs {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+}
+
+.form-search-hotel .container-infrastructure{
+  margin-left: 72px;
+  width:240px;
+}
+.form-search-hotel .container-costs {
+  display: flex;
+  width: 528px;
+  margin-right: 72px;
+  align-items:flex-end;
+}
+
+.form-search-hotel p{
+  width: 200px;
+  display: block;
+  padding: 0;
+}
+.form-search-hotel ul {
+  width: 200px;
+  display: block;
+  padding: 0;
+}
+.cost-selector{
+  display: flex;
+  flex-direction:row;
+}
+
+.cost label{
+  position: absolute;
+  top:62px;
+}
+.sort-list{
+  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 1056px;
+  height: 87px;
+  padding: 0;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+}
+
+.sort-list-title {
+  padding: 0px;
+  margin-left: 0;
+}
+
+.block-hotel h3{
+  display: block;
+
+  padding-left: 30px;
+
+}
+.block-hotel p{
+  display: block;
+  padding-left: 30px;
+}
+.results-hotels {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+
+  padding-top: 30px;
+
+}
+.container-price {
+  display: flex;
+  flex-direction:row;
 }
