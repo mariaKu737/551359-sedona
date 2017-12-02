@@ -9,20 +9,19 @@
   <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-
+<div class="site-container">
     <header class="main-header">
       <nav class="main-navigation">
-
         <a class="main-header-logo">
         <img src="img/logo.png" width="138" height="70" alt="Логотип сайта">
         </a>
         <div class="main-navigation-wrapper">
-          <div class="container">
+          <div class="container" id ="menu-container">
         <ul class="site-navigation">
           <li> <a href="information.html"> Информация </a></li>
           <li> <a href="gallery.html"> Фото и видео </a></li>
           <li> <a href="map.html"> Карта штата </a></li>
-          <li> <a href="inner.html"> Гостиницы </a></li>
+          <li class="site-navigation-current"> <a href="inner.html"> Гостиницы </a></li>
         </ul>
         </div>
       </div>
@@ -31,13 +30,13 @@
 <main class="container">
   <!--Форма !-->
   <section class="search-hotel-inner">
-    <h2 class="visually-hidden">Поиск гостиницы </h2>
+    <!--h2 class="visually-hidden">Поиск гостиницы </h2!-->
     <img src="img/background-inner.jpg" width="768" height="512" alt="Фон формы">
     <form class="form-search-hotel" action="https://echo.htmlacademy.ru" method="get">
       <div class="container-infrastructure">
           <p class="form-list-title"> Инфраструктура:</p>
           <ul class="form-list">
-            <li>  <input id="pool" type="checkbox"  name="pool" checked>
+            <li>  <input id="pool" class="pool" type="checkbox"  name="pool" checked>
               <label for="pool"> Бассейн </label>
             </li>
             <li> <input id="parking" type="checkbox" name="parking">
@@ -136,7 +135,7 @@
       <button type="button" class="detail"> Подробнее </button>
       <button type="button" class="booking"> Забронировать </button>
       </div>
-    <div class="star">
+    <div class="raiting">
       <img src="img/star.svg" alt="Рейтинг Desert Quail">
       <p class="raiting-value"> Рейтинг: 8,9 </p>
     </div>
@@ -156,7 +155,7 @@
         <button type="button" class="detail" > Подробнее </button>
         <button type="button" class="booking" > Забронировать </button>
       </div>
-      <div class="star">
+      <div class="raiting">
         <img src="img/star.svg" alt="Рейтинг Villas">
         <p class="raiting-value"> Рейтинг: 9,2 </p>
       </div>
@@ -166,21 +165,21 @@
 
 </main>
 <footer class="main-footer">
-<div class="container">
-  <p class="footer-hashtag"> #Visitsedona </p>
-  <div class="footer-social">
-    <h3 class="visually-hidden"> Социальные сети </h3>
-      <ul>
-        <li><a class="social-button" href="#"> <span class="visually-hidden"> Twitter </span> </a></li>
-        <li><a class="social-button" href="#"> <span class="visually-hidden"> Facebook </span> </a></li>
-        <li><a class="social-button" href="#"> <span class="visually-hidden"> Youtube </span> </a></li>
-      </ul>
+    <div class="container-footer">
+      <p class="footer-hashtag"> #Visitsedona </p>
+      <div class="footer-social">
+          <ul>
+            <li><a class="social-button" href="#"> <span class="visually-hidden"> Twitter </span> </a></li>
+            <li><a class="social-button" href="#"> <span class="visually-hidden"> Facebook </span> </a></li>
+            <li><a class="social-button" href="#"> <span class="visually-hidden"> Youtube </span> </a></li>
+          </ul>
+      </div>
+      <p class="footer-copyright">
+        Website by
+        <a class="site-button" href="https://htmlacademy.ru"> HTML Academy</a>
+      </p>
+    </div>
+    </footer>
   </div>
-  <p class="footer-copyright">
-    Website by
-    <a class="site-button" href="https://htmlacademy.ru"> HTML Academy</a>
-  </p>
-</div>
-</footer>
-  </body>
+    </body>
 </html>
