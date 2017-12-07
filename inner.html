@@ -18,7 +18,7 @@
         <div class="main-navigation-wrapper">
           <div class="container" id ="menu-container">
         <ul class="site-navigation">
-          <li> <a href="information.html"> Информация </a></li>
+          <li> <a href="info.html"> Информация </a></li>
           <li> <a href="gallery.html"> Фото и видео </a></li>
           <li> <a href="map.html"> Карта штата </a></li>
           <li class="site-navigation-current"> <a href="inner.html"> Гостиницы </a></li>
@@ -31,72 +31,76 @@
   <!--Форма !-->
   <section class="search-hotel-inner">
     <!--h2 class="visually-hidden">Поиск гостиницы </h2!-->
-    <img src="img/background-inner.jpg" width="768" height="512" alt="Фон формы">
+    <!--<img src="img/background-inner.jpg" width="768" height="512" alt="Фон формы">-->
     <form class="form-search-hotel" action="https://echo.htmlacademy.ru" method="get">
       <div class="container-infrastructure">
           <p class="form-list-title"> Инфраструктура:</p>
           <ul class="form-list">
-            <li>  <input id="pool" class="pool" type="checkbox"  name="pool" checked>
-              <label for="pool"> Бассейн </label>
+            <li>  <input id="pool" class="visually-hidden checkbox" type="checkbox"  name="pool" checked>
+              <label for="pool" tabindex="0"> Бассейн </label>
             </li>
-            <li> <input id="parking" type="checkbox" name="parking">
-              <label for="parking"> Парковка </label>
+            <li> <input id="parking" class="visually-hidden checkbox" type="checkbox" name="parking">
+              <label for="parking" tabindex="0"> Парковка </label>
             </li>
-            <li> <input id="wi-fi" type="checkbox" name="wi-fi">
-              <label for="wi-fi"> Wi-fi </label>
+            <li> <input id="wi-fi" class="visually-hidden checkbox" type="checkbox" name="wi-fi">
+              <label for="wi-fi" tabindex="0"> Wi-fi </label>
             </li>
           </ul>
         </div>
         <div class="container-housingtype">
           <p class="form-list-title"> Тип жилья:</p>
           <ul class="form-list">
-            <li>  <input id="type-hotel" type="checkbox" name="hotel" checked>
-              <label for="type-hotel"> Гостиница </label>
+            <li>  <input id="type-hotel" class="visually-hidden checkbox" type="checkbox" name="hotel" checked>
+              <label for="type-hotel" tabindex="0"> Гостиница </label>
             </li>
-            <li> <input id="type-motel" type="checkbox" name="motel" checked>
-              <label for="type-motel"> Мотель </label>
+            <li> <input id="type-motel" class="visually-hidden checkbox" type="checkbox" name="motel" checked>
+              <label for="type-motel" tabindex="0"> Мотель </label>
             </li>
-            <li> <input id="type-apartments" type="checkbox" name="apartments" checked>
-              <label for="type-apartments"> Апартаменты </label>
+            <li> <input id="type-apartments" class="visually-hidden checkbox" type="checkbox" name="apartments" checked>
+              <label for="type-apartments" tabindex="0"> Апартаменты </label>
             </li>
           </ul>
         </div>
-          <div class="container-costs">
-          <p class="form-list-title"> Стоимость в сутки (р): </p>
-          <div class="cost-full">
-            <div class="cost-selector">
-              <div class="cost">
-                <input id="cost-min" class="cost-min" type="text">
-                <label  for="cost-min">От 0</label>
-              </div>
-              <div class="cost">
-                <input id="cost-max" class="cost-max" type="text">
-                <label  for="cost-max">От 3000</label>
-              </div>
-            </div>
-            <div class="range-line">
-              <button type="button" class="button-range-min"> </button>
-              <button type="button" class="button-range-max"> </button>
-              <div class="gray-line">
 
-              </div>
+        <div class="filter-range">
+            <div class="filter-range-title">Стоимость в сутки (р):</div>
+            <div class="price-controls">
+              <label class="min-price">От <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">До <input type="text" name="max-price" value="3000"></label>
             </div>
-          </div>
-          <button class="button-show-result" type="submit"> Показать </button>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <button class="btn-transparent" type="submit">Показать</button>
         </div>
-    </form>
+
+      </form>
   </section>
 <div class="sort">
   <ul class="sort-list">
     <li><p class="sort-list-title">Найдено: 3 </p></li>
     <li><p class="sort-type">Сортировка: </p></li>
-    <li><a class="sort-item" href="#"> По цене </a> </li>
+    <li class="sort-item-current"><a class="sort-item" href="#"> По цене </a> </li>
     <li><a class="sort-item" href="#"> По типу</a> </li>
     <li><a class="sort-item" href="#"> По рейтингу</a> </li>
-    <li><button type="button" class="up"> <img src="img/icon-up-dir.svg" alt="Кнопка вверх">
-    </button> </li>
-    <li><button type="button" class="down"><img src="img/icon-down-dir.svg" alt="Кнопка вниз">
-     </button> </li>
+    <li>
+      <button type="button" class="up">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+            <path fill="#231F20" d="M5.5 0L0 10h11z"></path>
+          </svg>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="down">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+            <path fill="#231F20" d="M5.5 10L0 0h11"></path>
+          </svg>
+      </button>
+    </li>
   </ul>
 </div>
 <div class="results">
@@ -116,7 +120,12 @@
       <button type="button" class="booking" > Забронировать </button>
     </div>
     <div class="raiting">
-      <img src="img/star.svg" alt="Рейтинг Amara">
+      <div class="stars">
+          <img src="img/star.svg" width="18" height="18" alt="здезда">
+          <img src="img/star.svg" width="18" height="18" alt="здезда">
+          <img src="img/star.svg" width="18" height="18" alt="здезда">
+          <img src="img/star.svg" width="18" height="18" alt="здезда">
+      </div>
       <p class="raiting-value"> Рейтинг: 8,5 </p>
     </div>
   </div>
@@ -136,7 +145,11 @@
       <button type="button" class="booking"> Забронировать </button>
       </div>
     <div class="raiting">
-      <img src="img/star.svg" alt="Рейтинг Desert Quail">
+      <div class="stars">
+        <img src="img/star.svg" width="18" height="18" alt="здезда">
+        <img src="img/star.svg" width="18" height="18" alt="здезда">
+        <img src="img/star.svg" width="18" height="18" alt="здезда">
+      </div>
       <p class="raiting-value"> Рейтинг: 8,9 </p>
     </div>
     </div>
@@ -149,37 +162,38 @@
           <a class="hotel-name" href="#">Villas at Poco Diablo </a>
         </h3>
         <div class="container-price">
-        <p class="hotel-type">Аппартаменты </p>
+        <p class="hotel-type">Апартаменты </p>
         <p class="hotel-price">От 2000 р. </p>
         </div>
         <button type="button" class="detail" > Подробнее </button>
         <button type="button" class="booking" > Забронировать </button>
       </div>
       <div class="raiting">
-        <img src="img/star.svg" alt="Рейтинг Villas">
+        <div class="stars">
+          <img src="img/star.svg" width="18" height="18" alt="здезда">
+          <img src="img/star.svg" width="18" height="18" alt="здезда">
+        </div>
         <p class="raiting-value"> Рейтинг: 9,2 </p>
       </div>
   </div>
 </div>
-
-
 </main>
-<footer class="main-footer">
-    <div class="container-footer">
-      <p class="footer-hashtag"> #Visitsedona </p>
-      <div class="footer-social">
-          <ul>
-            <li><a class="social-button" href="#"> <span class="visually-hidden"> Twitter </span> </a></li>
-            <li><a class="social-button" href="#"> <span class="visually-hidden"> Facebook </span> </a></li>
-            <li><a class="social-button" href="#"> <span class="visually-hidden"> Youtube </span> </a></li>
-          </ul>
-      </div>
-      <p class="footer-copyright">
-        Website by
-        <a class="site-button" href="https://htmlacademy.ru"> HTML Academy</a>
-      </p>
+      <footer class="main-footer inner">
+          <div class="container-footer">
+            <p class="footer-hashtag"> #Visitsedona </p>
+            <div class="footer-social">
+                <ul>
+                    <li><a class="social-button twitter" href="#"></a></li>
+                    <li><a class="social-button facebook" href="#"></a></li>
+                    <li><a class="social-button youtube" href="#"></a></li>
+                </ul>
+            </div>
+            <p class="footer-copyright">
+              Website by
+              <a class="site-button" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+            </p>
+          </div>
+      </footer>
     </div>
-    </footer>
-  </div>
     </body>
 </html>

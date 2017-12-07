@@ -7,6 +7,9 @@
   <link href="css/normalize.css" rel="stylesheet">!-->
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
+  crossorigin="anonymous"></script>
+  <script src="script.js"></script>
   </head>
   <body>
     <div class="site-container">
@@ -16,9 +19,9 @@
           <img src="img/logo.png" width="138" height="70" alt="Логотип сайта">
         </a>
         <div class="main-navigation-wrapper">
-          <div class="container" id ="menu-container">
+          <div class="container menu-container">
             <ul class="site-navigation">
-              <li> <a href="information.html"> Информация </a></li>
+              <li> <a href="info.html"> Информация </a></li>
               <li> <a href="gallery.html"> Фото и видео </a></li>
               <li> <a href="map.html"> Карта штата </a></li>
               <li> <a href="inner.html"> Гостиницы </a></li>
@@ -30,7 +33,7 @@
 
 <main class="container">
 <figure class="header-img">
-    <img src="img/sedona.jpg" width="1200" height="780" alt="Седона">
+    <img src="img/sedona724.jpg" width="1200" height="724" alt="Седона">
     <div class="container-header">
     <span class="description-title">Седона — небольшой городок в Аризоне, заслуживающий
     большего!</span>
@@ -42,11 +45,11 @@
   <div class="reason-one">
     <div class="reason-title">
         <h3 class="reason-item-title">Настоящий <br>городок</h3>
-        <span class="reason-item-subtitle">—№1—</span>
+        <span class="reason-item-subtitle">— №1 —</span>
         <p class="reason-item-description">Седона — не атракцион для туристов, там течет своя жизнь</p>
     </div>
     <div class="reason-img-first">
-        <!--<img src="img/layer10.jpg" width="800" height="401" alt="Картинка Настоящий городок">-->
+        <img src="img/reason-first.png" width="800" height="256" alt="Картинка Настоящий городок">
     </div>
   </div>
   <div class="reason-two">
@@ -65,28 +68,28 @@
   </div>
   <div class="reason-three">
       <div class="reason-img-second">
-          <!--<img src="img/layer14.jpg" width="800" height="401" alt="Картинка Мост дьявола">!-->
+          <img src="img/reason2.png" width="800" height="256" alt="Картинка Мост дьявола">
       </div>
       <div class="reason-title">
-          <h3 class="reason-item-title"> Там есть <br> мост дьявола</h3>
-          <span class="reason-item-subtitle">—№2—</span>
-          <p class="reason-item-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <h3 class="reason-item-title two"> Там есть <br> мост дьявола</h3>
+          <span class="reason-item-subtitle">— №2 —</span>
+          <p class="reason-item-description two">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
       </div>
   </div>
   <div class="reason-four">
       <div class="reason-title">
           <h3 class="reason-item-title">Небольшая площадь</h3>
-          <span class="reason-item-subtitle">—№3—</span>
+          <span class="reason-item-subtitle">— №3 —</span>
           <p class="reason-item-description">Все достопремичательности находятся очень близко</p>
       </div>
       <div class="reason-title">
           <h3 class="reason-item-title">Красивая дорога</h3>
-          <span class="reason-item-subtitle">—№4—</span>
+          <span class="reason-item-subtitle">— №4 —</span>
           <p class="reason-item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </div>
       <div class="reason-title">
           <h3 class="reason-item-title">Мало туристов</h3>
-          <span class="reason-item-subtitle">—№5—</span>
+          <span class="reason-item-subtitle">— №5 —</span>
           <p class="reason-item-description">Большинство едет в гранд Каньон и толпится там</p>
       </div>
     </div>
@@ -97,58 +100,55 @@
       <h3 class="form-title">Заинтересовались?</h3>
       <p class="form-subtitle">Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне </p>
-      <button class="button-form-open" type="submit" > Поиск гостиницы в Седоне </button>
+      <button class="button-form-open" type="button" > Поиск гостиницы в Седоне </button>
   </div>
   <img src="img/map.png" width="1200" height="593" alt="Карта" >
 
 <!-- Форма -->
 
 <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
-    <p class="label-form" id="label-form-top">
+    <p class="label-form top">
       <label for="arrival-date"> Дата заезда: </label>
       <input id="arrival-date" class="arrival-date" type="text" name="arrival-date" value="24 апреля 2017">
     </p>
-    <p class="label-form">
+    <p class="label-form bottom">
       <label for="date-departure"> Дата выезда: </label>
-      <input id="date-departure" class="arrival-date" type="text" name="date-departure" value="4 июля 2017" >
+      <input id="date-departure" class="arrival-date" type="text" name="date-departure" value="4 апреля 2017" >
     </p>
-    <div class="label-form" id="selector">
+    <div class="label-form selector">
+      <div class="left">
         <label for="number-adult"> Взрослые: </label>
-        <div class="adult-selector">
-            <button type="button" class="number-adult-minus">-</button>
-            <input id="number-adult" class="number-adult" type="text" value="2">
-            <button type="button" class="number-adult-plus">+</button>
-        </div>
+        <button type="button" class="number-adult-minus">—</button>
+        <input id="number-adult" class="number-adult" type="text" value="2">
+        <button type="button" class="number-adult-plus">+</button>
+      </div>
+      <div class="right">
         <label for="nubmer-children"> Дети: </label>
-        <div class="children-selector">
-            <button type="button" class="number-adult-minus">-</button>
-            <input id="nubmer-children" class="number-adult" type="text" value="0">
-            <button type="button" class="number-adult-plus">+</button>
-        </div>
+        <button type="button" class="number-adult-minus">—</button>
+        <input id="nubmer-children" class="number-adult" type="text" value="0">
+        <button type="button" class="number-adult-plus">+</button>
+      </div>
     </div>
-
   <button class="button-search" type="submit"> Найти </button>
 </form>
-
 </section>
 </main>
-
-    <footer class="main-footer">
-        <div class="container-footer">
-          <p class="footer-hashtag"> #Visitsedona </p>
-          <div class="footer-social">
-              <ul>
-                <li><a class="social-button" href="#"> <span class="visually-hidden"> Twitter </span> </a></li>
-                <li><a class="social-button" href="#"> <span class="visually-hidden"> Facebook </span> </a></li>
-                <li><a class="social-button" href="#"> <span class="visually-hidden"> Youtube </span> </a></li>
-              </ul>
+      <footer class="main-footer">
+          <div class="container-footer">
+            <p class="footer-hashtag"> #Visitsedona </p>
+            <div class="footer-social">
+                <ul>
+                  <li><a class="social-button twitter" href="#"></a></li>
+                  <li><a class="social-button facebook" href="#"></a></li>
+                  <li><a class="social-button youtube" href="#"></a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+              <p>Website by</p>
+              <a class="site-button" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+            </div>
           </div>
-          <p class="footer-copyright">
-            Website by
-            <a class="site-button" href="https://htmlacademy.ru"> HTML Academy</a>
-          </p>
-        </div>
-        </footer>
-</div>
+      </footer>
+    </div>
   </body>
 </html>
